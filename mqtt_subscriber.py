@@ -10,7 +10,7 @@ client = paho.Client(client_id="Subscriber", clean_session=True, userdata=None, 
 client.on_subscribe = on_subscribe
 client.on_message = on_message
 client.connect(host="localhost", port=1883)
-client.subscribe("topic_1", qos=1)
+client.subscribe("my/topic_1", qos=1)
 
 client.loop_forever()
 

@@ -14,5 +14,6 @@ data = 0
 
 while True:
     data += 1
-    (rc, mid) = client.publish("topic_1", str(data), qos=1)
+    msg = "Message:" + str(data)
+    (rc, mid) = client.publish("my/topic_1", str(msg), qos=1)
     time.sleep(5)
